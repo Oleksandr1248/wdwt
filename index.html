@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+            }
+            header{
+                display: flex;
+                padding: 10px;
+                margin-bottom: 40px;
+                box-shadow: 0px -15px 20px 0px gray;
+                justify-content: space-between;
+                align-items: center;
+            }
+            main{
+                margin: 0 10px;
+            }
+            .nav1{
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .nav1 a{
+                margin: 0px 30px;
+            }
+            .nav1 a:hover{
+                background-color: aqua;
+                cursor: pointer;
+            }
+            article{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .s1{
+                border: 1px solid lightgray;
+                border-radius: 10px;
+                width: 33%;
+                overflow: hidden;
+                font-size: 17px;
+                margin-bottom: 1%;
+            }
+            .nav-select{
+                text-decoration: solid underline aqua;
+                text-underline-offset: 6px;
+            }
+            .button-login{
+                margin: auto 0px;
+                padding: 5px 20px;
+                width: max-content;
+                height: max-content;
+                background-color: lightskyblue;
+                border-radius: 15px;
+                font-size: 20px;
+                border: 1px solid lightgray;
+            }
+            .button-login:hover{
+                background-color: white;
+                cursor: pointer;
+            }
+            .s1 [type="submit"]{
+                width: 100%;
+                padding: 5px 0;
+                color: white;
+                background-color: dodgerblue;
+                border: 0;
+                font-size: 20px;
+            }
+            .s1:hover{
+                box-shadow: 1px 1px 5px black;
+                cursor: pointer;
+            }
+            .section-text{
+                margin: 0px 5px;
+            }
+            .promo{
+                width: max-content;
+                height: max-content;
+                border-radius: 100%;
+                background-color: red;
+                font-size: 40px;
+                text-align: center;
+                color: white;
+                border: 3px solid white;
+                padding: 0 5px;
+                position: absolute;
+            }
+            .promo-pos1{
+                left: 0px;
+                top: 150px;
+            }
+            .drop{
+                font-size: 30px;
+                font-weight: bold;
+                display: none;
+            }
+            .ds1{
+                padding: 5px;
+                width: max-content;
+                height: max-content;
+            }
+            .drop-item{
+                position: absolute;
+                width: max-content;
+                z-index: 1;
+                background-color: silver;
+                max-height: 0px;
+                overflow:hidden;
+                transition: max-height 0.8s linear;
+            }
+            .drop-item div{
+                display: block;
+                text-align: center;
+                padding: 5px;
+            }
+            .drop-item div:hover{
+                background-color: aqua;
+                color: black;
+                cursor: pointer;
+            }
+            .drop:hover{
+                cursor: pointer;
+            }
+            .drop:hover .drop-item{
+                max-height: 500px;
+            }
+            @media (max-width: 960px){
+                .nav1{
+                    font-size: 25px;
+                }
+                .s1{
+                    width: 49%;
+                }
+            }
+            @media (max-width: 768px){
+                .nav1{
+                    display: none;
+                }
+                .s1{
+                    width: 100%;
+                }
+                .drop{
+                    display: block;
+                }
+            }
+        </style>
+        <title>Project</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="img\logo.png" width="100px">
+            <section class="nav1">
+                <a class="nav-select">Головна</a>
+                <a>Каталог</a>
+                <a>Контакти</a>
+            </section>
+            <section class="drop">
+                <div class="ds1 nav-select">Головна</div>
+                <div class="drop-item">
+                    <div>Каталог</div>
+                    <div>Контакти</div>
+                </div>
+            </section>    
+            <input type="submit" value="Log in" class="button-login">
+        </header>
+        <main>
+            <article>
+                <section class="s1">
+                    <img src="img\image1.jpg" width="100%">
+                    <div class="section-text">
+                        <h3>Подорож по пустелі</h3>
+                        <p>Незабутня подорож по пустелі для відпочінку</p>
+                    </div>
+                    <div class="promo promo-pos1">%</div>
+                    <input type="submit" value="Детальніше">
+                </section>
+                <section class="s1">
+                    <img src="img\image2.jpg" width="100%">
+                    <div class="section-text">
+                        <h3>Подорож по пустелі</h3>
+                        <p>Незабутня подорож по пустелі для відпочінку</p>
+                    </div>
+                    <div class="promo promo-pos1">%</div>
+                    <input type="submit" value="Детальніше">
+                </section>
+                <section class="s1">
+                    <img src="img\image3.jpg" width="100%">
+                    <div class="section-text">
+                        <h3>Подорож по пустелі</h3>
+                        <p>Незабутня подорож по пустелі для відпочінку</p>
+                    </div>
+                    <div class="promo promo-pos1">%</div>
+                    <input type="submit" value="Детальніше">
+                </section>
+                <section class="s1">
+                    <img src="img\image4.jpg" width="100%">
+                    <div class="section-text">
+                        <h3>Подорож по пустелі</h3>
+                        <p>Незабутня подорож по пустелі для відпочінку</p>
+                    </div>
+                    <div class="promo promo-pos1">%</div>
+                    <input type="submit" value="Детальніше">
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
